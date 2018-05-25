@@ -1,0 +1,29 @@
+.footer {
+
+  font-family: "urw-din-semi-condensed", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  border-bottom: 20px solid #111b2f;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  a {
+    color: black;
+  }
+
+  p {
+    font-size: 10px;
+    margin-bottom: 0;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  .row > div:last-child {
+    text-align: right;
+  }
+
+}

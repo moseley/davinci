@@ -1,0 +1,29 @@
+.search-form {
+
+  input {
+    padding: .175rem;
+    font-size: .9rem;
+    border: none;
+    border-radius: 0;
+  }
+
+  .input-group {
+    border-bottom: 1px solid #7b7a78;
+    width: 100%;
+  }
+
+  .btn {
+
+    padding: 0;
+
+    .icon {
+      width: 12px;
+      height: 12px;
+      background-color: white;
+      color: #7b7a78;
+      fill: currentColor;
+    }
+
+  }
+
+}

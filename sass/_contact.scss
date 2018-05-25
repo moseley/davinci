@@ -1,0 +1,36 @@
+.contact-panel {
+  background-color: #111b2f;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.contact-panel .form-control {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-top: 1px solid white;
+  border-radius: 0;
+  padding-left: 0;
+  font-family: "urw-din-semi-condensed", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.contact-panel .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+.contact-panel .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+}
+.contact-panel .form-control::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+}
+.contact-panel .btn {
+  background-color: #7B7A78;
+  border:none;
+  border-radius: 0;
+  color: white;
+  font-family: "urw-din-semi-condensed", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
