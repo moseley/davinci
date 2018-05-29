@@ -1,0 +1,100 @@
+.block-photo {
+  position: relative;
+  margin-bottom: 30px;
+
+  .caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: $white;
+    padding: 20px;
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      line-height: 1.45rem;
+    }
+  }
+
+  .caption-text {
+    color: $white;
+
+    h3 {
+      font-size: 5rem;
+    }
+
+    p {
+      font-size: 2.2rem;
+    }
+  }
+
+  .caption-blue {
+    background-color: $blue;
+    color: $white;
+    padding: 20px;
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      line-height: 1.45rem;
+    }
+  }
+
+  .caption-white {
+    background-color: $white;
+    color: $black;
+    padding: 20px;
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      line-height: 1.45rem;
+    }
+  }
+
+  .caption-pos-center {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .caption-pos-nw {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+  }
+
+  .caption-pos-ne {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+  }
+
+  .caption-pos-sw {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+  }
+
+  .caption-pos-se {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+  }
+}

@@ -1,0 +1,22 @@
+.block-headline {
+
+  margin-bottom: 30px;
+
+  h2 {
+    float: left;
+  }
+
+  p {
+    float: left;
+    padding-top: 0.8rem;
+    padding-left: 15px;
+  }
+
+  &:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+}
