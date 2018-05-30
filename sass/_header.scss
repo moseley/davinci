@@ -8,3 +8,13 @@ a.navbar-brand p {
 #primary {
   background-color: $white;
 }
+
+.title {
+  background-color: $gray-600;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  h1 {
+      color: $white;
+  }
+}

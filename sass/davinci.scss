@@ -1,5 +1,8 @@
 @import "variables";
 @import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/slick-carousel/slick/slick.scss";
+@import "../node_modules/slick-carousel/slick/slick-theme.scss";
+@import "slideshow";
 @import "navbar";
 @import "header";
 @import "contact";
@@ -7,3 +10,4 @@
 @import "footer";
 @import "block-photo";
 @import "block-headline";
+@import "block-content";
