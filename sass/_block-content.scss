@@ -13,10 +13,25 @@
   color: $white;
 }
 
-.block-content .col {
-  margin: 20px;
+.block-content {
+  margin-left: -15px;
+  margin-right: -15px;
+  border-bottom: 10px solid $white;
 
-  img {
-    max-width: 100%;
+  .col {
+    //margin: 20px;
+
+    .content-text {
+      //margin-left: -15px;
+      //margin-right: -15px;
+      padding: 20px;
+    }
+
+    .content-img {
+      margin-left: -15px;
+      margin-right: -15px;
+      overflow: hidden;
+      //margin: -20px;
+    }
   }
 }

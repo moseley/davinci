@@ -21,7 +21,7 @@
       'container'       => false,
       'menu_id'         => false,
       'menu_class'      => 'navbar-nav ml-auto',
-      'depth'           => 2,
+      'depth'           => 3,
       'fallback_cb'     => 'Bootstrap_Nav_Walker::fallback',
       'walker'          => new Bootstrap_Nav_Walker()
       ] ); ?>

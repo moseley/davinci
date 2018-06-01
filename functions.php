@@ -54,6 +54,13 @@ function davinci_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'davinci_scripts' );
 
+function davinci_anchor_link( $atts, $item, $args ) {
+    $atts['href'] .= ( !empty( $item->xfn ) ? '#' . $item->xfn : '' );
+    return $atts;
+}
+
+add_filter( 'nav_menu_link_attributes', 'davinci_anchor_link', 10, 3 );
+
 function davinci_include_svg_icons() {
 	// Define SVG sprite file.
 	$svg_icons = get_parent_theme_file_path( '/assets/svg/icons.svg' );
