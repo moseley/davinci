@@ -40,7 +40,7 @@
                     <?php foreach ($photos as $photo) : ?>
 
                       <div class="block-photo">
-                        <img src="<?php echo $photo['url']; ?>" class="img-fluid">
+                        <img src="<?php echo $photo['url']; ?>" class="img-fluid" alt="<?php echo $photo['alt']; ?>">
 
                         <?php if ( get_sub_field('overlay') != 'na' ) : ?>
 
@@ -126,6 +126,20 @@
                 <?php endif; ?>
               </div><!-- .row -->
             </div><!-- .block-content -->
+
+          <?php elseif ( get_row_layout() == 'bookmark' ) : ?>
+
+            <div id="<?php the_sub_field('bookmark_id'); ?>" class="invisible">&nbsp;</div>
+
+          <?php elseif ( get_row_layout() == 'video' ) : ?>
+
+            <div class="row">
+              <div class="col">
+                <div class="block-video">
+                  <?php the_sub_field( 'video' ); ?>
+                </div>
+              </div>
+            </div>
 
           <?php endif; ?>
 

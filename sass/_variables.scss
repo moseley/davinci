@@ -7,11 +7,12 @@ $font-family-sans-serif: "urw-din-semi-condensed", sans-serif;
 $font-family-serif:      "ten-oldstyle", serif;
 $font-family-base:       $font-family-serif;
 
-$slick-font-path: "./../../node_modules/slick-carousel/slick/fonts/" !default;
-$slick-font-family: "slick" !default;
-$slick-loader-path: "./../../node_modules/slick-carousel/slick/" !default;
+$slick-font-path: "./../../node_modules/slick-carousel/slick/fonts/";
+$slick-font-family: "slick";
+$slick-loader-path: "./../../node_modules/slick-carousel/slick/";
 $slick-dot-color: white;
 $slick-dot-color-active: $gray-600;
-$slick-dot-character: "\2022" !default;
+$slick-prev-character: "\003c" !default;
+$slick-next-character: "\003e" !default;
 $slick-dot-size: 12px;
 $slick-opacity-not-active: 0.75;

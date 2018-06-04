@@ -56,3 +56,49 @@
         }
     }
 }
+
+/* Arrows */
+
+.slick-prev,
+.slick-next {
+    height: 30px;
+    width: 30px;
+    line-height: 0px;
+    font-size: 0px;
+    top: 85%;
+    transform: scale(1, 1.5);
+    -webkit-transform: scale(1, 2); /* Safari and Chrome */
+    -moz-transform: scale(1, 2); /* Firefox */
+    -ms-transform: scale(1, 2); /* IE 9+ */
+    -o-transform: scale(1, 2); /* Opera */
+    font-weight: lighter;
+    z-index: 1;
+    &:hover, &:focus {
+        &:before {
+            opacity: $slick-opacity-on-hover;
+        }
+    }
+    &.slick-disabled:before {
+        opacity: $slick-opacity-not-active;
+    }
+    &:before {
+        font-size: 30px;
+        line-height: 1;
+        color: $slick-arrow-color;
+        opacity: $slick-opacity-default;
+    }
+}
+
+.slick-prev {
+    left: 47%;
+    [dir="rtl"] & {
+        right: 47%;
+    }
+}
+
+.slick-next {
+    right: 47%;
+    [dir="rtl"] & {
+        left: 47%;
+    }
+}
