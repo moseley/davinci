@@ -1,11 +1,11 @@
-<div class="form-panel contact-panel">
+<div class="form-panel bid-panel">
   <div class="container">
     <form>
     <div class="row align-items-center">
 
         <div class="col">
-          <h2><?php _e('Intrigued by what you see?', 'davinci'); ?></h2>
-          <p><?php _e('Allow a DaVinci advisor to tell you more.', 'davinci'); ?></p>
+          <h2><?php _e('Bid Request', 'davinci'); ?></h2>
+          <p><?php _e('DaVinci advisors are ready: ', 'davinci'); ?><strong><?php _e('425.609.2500', 'davinci'); ?></strong></p>
           <button type="submit" class="btn btn-primary">Submit</button>
         </div>
         <div class="col">
