@@ -61,6 +61,43 @@ function davinci_anchor_link( $atts, $item, $args ) {
 
 add_filter( 'nav_menu_link_attributes', 'davinci_anchor_link', 10, 3 );
 
+function davinci_next_page_button() {
+	$pagelist = get_pages( 'sort_column=menu_order&sort_order=asc' );
+	$pages = array();
+	foreach ( $pagelist as $page ) {
+	   $pages[] += $page->ID;
+	}
+
+	$current = array_search( get_the_ID(), $pages );
+	$prevID = $pages[$current-1];
+	$nextID = $pages[$current+1];
+
+	echo '<div class="navigation">';
+
+	if (!empty($prevID)) {
+		echo '<div class="alignleft">';
+		echo '<a href="';
+		echo get_permalink($prevID);
+		echo '"';
+		echo 'title="';
+		echo get_the_title($prevID);
+		echo'" class="btn btn-secondary">&lt; View previous model</a>';
+		echo "</div>";
+	}
+	if ( ! empty( $nextID ) ) {
+		echo '<div class="alignright">';
+		echo '<a href="';
+		echo get_permalink( $nextID );
+		echo '"';
+		echo 'title="';
+		echo get_the_title( $nextID );
+		echo'" class="btn btn-secondary">View next model &gt;</a>';
+		echo "</div>";
+	}
+
+  echo '</div>';
+}
+
 function davinci_include_svg_icons() {
 	// Define SVG sprite file.
 	$svg_icons = get_parent_theme_file_path( '/assets/svg/icons.svg' );

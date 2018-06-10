@@ -7,6 +7,7 @@
         <div class="title">
           <div class="row">
             <div class="col text-center">
+              <?php davinci_next_page_button(); ?>
               <h1><?php the_title(); ?></h1>
             </div>
           </div>
@@ -26,16 +27,16 @@
               <?php
 
               if (get_sub_field('gallery_type') == 'full') {
-                $slickOptions = '{"dots": true}';
+                $slickOptions = '{"dots": true, "arrows": false}';
               }
               elseif (get_sub_field('gallery_type') == 'two') {
-                $slickOptions = '{"slidesToShow": 2, "slidesToScroll": 1}';
+                $slickOptions = '{"slidesToShow": 2, "slidesToScroll": 1, "dots": false, "arrows": true}';
               }
               ?>
 
               <div class="row">
                 <div class="col">
-                  <div class="slick two-gallery" data-slick='<?php echo $slickOptions; ?>'>
+                  <div class="slick <?php echo get_sub_field('gallery_type') == 'two' ? 'two-gallery' : ''; ?>" data-slick='<?php echo $slickOptions; ?>'>
 
                     <?php foreach ($photos as $photo) : ?>
 

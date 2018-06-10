@@ -1,5 +1,6 @@
 $blue:     #111b2f;
 $orange:   #ae6046;
+$gray-400: #ced4da;
 $gray-600: #848383;
 $body-bg:  $blue;
 
@@ -11,8 +12,8 @@ $slick-font-path: "./../../node_modules/slick-carousel/slick/fonts/";
 $slick-font-family: "slick";
 $slick-loader-path: "./../../node_modules/slick-carousel/slick/";
 $slick-dot-color: white;
-$slick-dot-color-active: $gray-600;
+$slick-dot-color-active: $gray-400;
 $slick-prev-character: "\003c" !default;
 $slick-next-character: "\003e" !default;
-$slick-dot-size: 12px;
+$slick-dot-size: 16px;
 $slick-opacity-not-active: 0.75;

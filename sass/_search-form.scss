@@ -15,11 +15,12 @@
   .btn {
 
     padding: 0;
+    background-color: $white;
 
     .icon {
       width: 12px;
       height: 12px;
-      background-color: white;
+      background-color: $white;
       color: #7b7a78;
       fill: currentColor;
     }

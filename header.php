@@ -8,7 +8,7 @@
 <body <?php body_class(); ?>>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/">
-      <img src="<?php echo get_theme_file_uri( '/assets/svg/logo.svg' ); ?>" width="200" height="60"><br>
+      <img src="<?php echo get_theme_file_uri( '/assets/svg/logo.svg' ); ?>" width="300" height="90"><br>
       <p class="text-center"><?php echo get_bloginfo( 'description' ); ?></p>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
