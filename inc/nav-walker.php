@@ -23,7 +23,7 @@ class Bootstrap_Nav_Walker extends Walker_Nav_Menu
      */
     public function start_lvl( &$output, $depth = 0, $args = array() ) {
         $indent = str_repeat("\t", $depth);
-        $output .= "\n$indent<div class=\"dropdown-menu\">\n";
+        $output .= "\n$indent<ul class=\"dropdown-menu\">\n";
     }
 
     /**
@@ -39,7 +39,7 @@ class Bootstrap_Nav_Walker extends Walker_Nav_Menu
      */
     public function end_lvl( &$output, $depth = 0, $args = array() ) {
         $indent = str_repeat("\t", $depth);
-        $output .= "$indent</div>\n";
+        $output .= "$indent</ul>\n";
     }
 
     /**
@@ -56,6 +56,10 @@ class Bootstrap_Nav_Walker extends Walker_Nav_Menu
      * @param int    $id     Current item ID.
      */
     public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+      //echo "<pre>";
+      //echo "Depth=" . $depth;
+      //print_r($item);
+      //echo "</pre>";
         $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
         $classes = empty( $item->classes ) ? array() : (array) $item->classes;
@@ -105,9 +109,9 @@ class Bootstrap_Nav_Walker extends Walker_Nav_Menu
         $id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 
         // New
-        if ($depth === 0) {
+        //if ($depth === 0) {
             $output .= $indent . '<li' . $id . $class_names .'>';
-        }
+        //}
         //
 
         // $output .= $indent . '<li' . $id . $class_names .'>';
@@ -123,14 +127,17 @@ class Bootstrap_Nav_Walker extends Walker_Nav_Menu
             $atts['class'] = 'nav-link';
         }
 
-        if ($depth === 0 && in_array('menu-item-has-children', $classes)) {
+        if (in_array('menu-item-has-children', $classes)) {
             $atts['class']       .= ' dropdown-toggle';
             $atts['data-toggle']  = 'dropdown';
         }
 
         if ($depth > 0) {
             $manual_class = array_values($classes)[0] .' '. 'dropdown-item';
-            $atts ['class']= $manual_class;
+            $atts['class'] = $manual_class;
+            if (in_array('menu-item-has-children', $classes)) {
+              $atts['class'] .= ' dropdown-toggle';
+            }
         }
 
         if (in_array('current-menu-item', $item->classes)) {

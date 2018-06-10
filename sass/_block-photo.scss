@@ -115,18 +115,17 @@
 
 .two-gallery .block-photo {
 
-
   .caption-text,
   .caption-blue,
   .caption-white {
 
     h3 {
-      font-size: 2.2rem;
+      font-size: 1.75rem;
     }
 
     p {
-      font-size: 1.4rem;
-      line-height: 1.8rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
     }
 
   }
@@ -144,5 +143,22 @@
 
   .caption-pos-se {
     width: 100%;
+  }
+}
+@include media-breakpoint-up(md) {
+  .two-gallery .block-photo {
+
+    .caption-text,
+    .caption-blue,
+    .caption-white {
+      h3 {
+        font-size: 2.2rem;
+      }
+
+      p {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+      }
+    }
   }
 }

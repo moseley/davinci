@@ -1,5 +1,14 @@
 $('.slick').slick();
 
+// Bootstrap Hover Dropdown Menu
+$('body').on('mouseenter mouseleave','.dropdown',function(e){
+  var _d=$(e.target).closest('.dropdown');_d.addClass('show');
+  setTimeout(function(){
+    _d[_d.is(':hover')?'addClass':'removeClass']('show');
+    $('[data-toggle="dropdown"]', _d).attr('aria-expanded',_d.is(':hover'));
+  },300);
+});
+
 /*!
  * Bootstrap 4 multi dropdown navbar ( https://bootstrapthemes.co/demo/resource/bootstrap-4-multi-dropdown-navbar/ )
  * Copyright 2017.
@@ -7,8 +16,8 @@ $('.slick').slick();
  */
 
 
-/*jQuery( document ).ready( function ($) {
-    $( '.dropdown-menu a.dropdown-toggle' ).on( 'click', function ( e ) {
+jQuery( document ).ready( function ($) {
+    $( '.dropdown-menu a.dropdown-toggle' ).on( 'click', function () {
         var $el = $( this );
         var $parent = $( this ).offsetParent( ".dropdown-menu" );
         if ( !$( this ).next().hasClass( 'show' ) ) {
@@ -19,7 +28,7 @@ $('.slick').slick();
 
         $( this ).parent( "li" ).toggleClass( 'show' );
 
-        $( this ).parents( 'li.nav-item.dropdown.show' ).on( 'hidden.bs.dropdown', function ( e ) {
+        $( this ).parents( 'li.nav-item.dropdown.show' ).on( 'hidden.bs.dropdown', function () {
             $( '.dropdown-menu .show' ).removeClass( "show" );
         } );
 
@@ -29,4 +38,4 @@ $('.slick').slick();
 
         return false;
     } );
-} );*/
+} );
