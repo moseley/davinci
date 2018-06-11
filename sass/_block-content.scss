@@ -34,4 +34,14 @@
       //margin: -20px;
     }
   }
+
+  .btn {
+    font-family: $font-family-sans-serif;
+  }
+
+  .btn-warning {
+    background-color: $orange;
+    border-color: $orange;
+    color: $white;
+  }
 }
