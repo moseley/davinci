@@ -26,8 +26,17 @@
           <div class="form-group">
             <input type="email" class="form-control" id="email" placeholder="Email">
           </div>
-          <div class="form-group">
-            <textarea class="form-control" rows="1" id="project-description" placeholder="Describe your project"></textarea>
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <input type="text" class="form-control" id="city" placeholder="City">
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <input type="text" class="form-control" id="state" placeholder="State">
+              </div>
+            </div>
           </div>
         </div>
 
