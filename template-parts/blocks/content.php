@@ -22,10 +22,10 @@
         <?php
 
         if (get_sub_field('gallery_type') == 'full') {
-          $slickOptions = '{"dots": true, "arrows": false}';
+          $slickOptions = '{"dots": true, "arrows": false, "autoplay": true, "autoplaySpeed": 3000}';
         }
         elseif (get_sub_field('gallery_type') == 'two') {
-          $slickOptions = '{"slidesToShow": 2, "slidesToScroll": 1, "dots": false, "arrows": true}';
+          $slickOptions = '{"slidesToShow": 2, "slidesToScroll": 1, "dots": false, "arrows": true, "autoplay": true, "autoplaySpeed": 3000}';
         }
         ?>
 
