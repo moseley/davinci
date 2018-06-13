@@ -1,16 +1,25 @@
 .block-content-white {
   background-color: $white;
   color: $gray-900;
+  hr {
+    color: $gray-900;
+  }
 }
 
 .block-content-blue {
   background-color: $blue;
   color: $white;
+  hr {
+    color: $white;
+  }
 }
 
 .block-content-gray {
   background-color: $gray-600;
   color: $white;
+  hr {
+    color: $white;
+  }
 }
 
 .block-content {
