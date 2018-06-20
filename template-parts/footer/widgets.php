@@ -1,5 +1,5 @@
 <div class="row align-items-end">
-  <div class="col">
+  <div class="col-sm">
     <?php if ( is_active_sidebar( 'footer-one' ) ) : ?>
 
       <aside class="widget-area" role="complementary" aria-label="<?php esc_attr_e( 'Footer One', 'davinci' ); ?>">
@@ -10,7 +10,7 @@
 
     <?php endif; ?>
   </div><!-- .col -->
-  <div class="col">
+  <div class="col-sm">
     <?php if ( is_active_sidebar( 'footer-two' ) ) : ?>
 
       <aside class="widget-area" role="complementary" aria-label="<?php esc_attr_e( 'Footer Two', 'davinci' ); ?>">
@@ -21,7 +21,7 @@
 
     <?php endif; ?>
   </div><!-- .col -->
-  <div class="col">
+  <div class="col-sm">
     <?php if ( is_active_sidebar( 'footer-three' ) ) : ?>
 
       <aside class="widget-area" role="complementary" aria-label="<?php esc_attr_e( 'Footer Three', 'davinci' ); ?>">

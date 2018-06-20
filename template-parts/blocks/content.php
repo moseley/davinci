@@ -83,7 +83,7 @@
 
       <div class="block-content block-content-<?php the_sub_field('background'); ?>">
         <div class="row">
-          <div class="col">
+          <div class="col-sm">
             <?php if ( get_sub_field('column_1') === 'content' ) : ?>
               <div class="content-text">
                 <?php the_sub_field('content_1'); ?>
@@ -93,9 +93,9 @@
                 <img src="<?php echo $photo1['url']; ?>" class="img-fluid">
               </div>
             <?php endif; ?>
-          </div><!-- .col -->
+          </div><!-- .col-sm -->
           <?php if ( get_sub_field('columns') != '1' ) : ?>
-          <div class="col">
+          <div class="col-sm">
             <?php if ( get_sub_field('column_2') === 'content' ) : ?>
               <div class="content-text">
                 <?php the_sub_field('content_2'); ?>
@@ -105,10 +105,10 @@
                 <img src="<?php echo $photo2['url']; ?>" class="img-fluid">
               </div>
             <?php endif; ?>
-          </div><!-- .col -->
+          </div><!-- .col-sm -->
           <?php endif; ?>
           <?php if ( get_sub_field('columns') == '3' ) : ?>
-          <div class="col">
+          <div class="col-sm">
             <?php if ( get_sub_field('column_3') === 'content' ) : ?>
               <div class="content-text">
                 <?php the_sub_field('content_3'); ?>
@@ -118,7 +118,7 @@
                 <img src="<?php echo $photo3['url']; ?>" class="img-fluid">
               </div>
             <?php endif; ?>
-          </div><!-- .col -->
+          </div><!-- .col-sm -->
           <?php endif; ?>
         </div><!-- .row -->
       </div><!-- .block-content -->
