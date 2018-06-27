@@ -5,7 +5,7 @@
 
         <div class="col-sm-4">
           <h2><?php _e('Bid Request', 'davinci'); ?></h2>
-          <p><?php _e('DaVinci advisors are ready: ', 'davinci'); ?><strong><?php _e('425.609.2500', 'davinci'); ?></strong></p>
+          <p><?php _e('DaVinci advisors are ready: ', 'davinci'); ?><strong><?php _e('800.654.1177', 'davinci'); ?></strong></p>
 
         </div>
         <div class="col-sm-8">
@@ -66,7 +66,7 @@
         <div class="col-sm-8">&nbsp;</div>
 
       </div><!-- .row -->
-      
+
     </form>
   </div>
 </div>
