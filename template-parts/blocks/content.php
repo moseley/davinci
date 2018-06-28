@@ -36,7 +36,13 @@
               <?php foreach ($photos as $photo) : ?>
 
                 <div class="block-photo">
+                  <?php if (substr($photo['description'], 0, 4) === 'http') : ?>
+                    <a href="<?php echo $photo['description']; ?>">
+                  <?php endif; ?>
                   <img src="<?php echo $photo['url']; ?>" class="img-fluid" alt="<?php echo $photo['alt']; ?>">
+                  <?php if (substr($photo['description'], 0, 4) === 'http') : ?>
+                    </a>
+                  <?php endif; ?>
 
                   <?php if ( get_sub_field('overlay') != 'na' ) : ?>
 
