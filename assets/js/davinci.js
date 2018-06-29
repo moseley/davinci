@@ -1,4 +1,4 @@
-/*var docWidth = document.documentElement.offsetWidth;
+var docWidth = document.documentElement.offsetWidth;
 
 [].forEach.call(
   document.querySelectorAll('*'),
@@ -7,7 +7,7 @@
       console.log(el);
     }
   }
-);*/
+);
 
 jQuery('.slick').slick();
 
