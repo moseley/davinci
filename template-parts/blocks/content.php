@@ -77,6 +77,7 @@
 
     <?php elseif ( get_row_layout() == 'headline' ) : ?>
 
+    </div><!-- #primary .container-fluid -->
       <div class="row">
         <div class="col">
           <div class="block-headline">
@@ -85,6 +86,7 @@
           </div>
         </div>
       </div>
+    <div class="container-fluid">
 
     <?php elseif ( get_row_layout() == 'content' ) : ?>
     </div><!-- #primary .container-fluid -->
