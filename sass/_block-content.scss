@@ -23,8 +23,9 @@
 }
 
 .block-content {
-  margin-left: -15px;
-  margin-right: -15px;
+
+  //margin-left: -15px;
+  //margin-right: -15px;
   //border-bottom: 10px solid $white;
 
   .content-text {
@@ -34,9 +35,9 @@
   }
 
   .content-img {
-    margin-left: -15px;
-    margin-right: -15px;
-    overflow: hidden;
+    //margin-left: -15px;
+    //margin-right: -15px;
+    //overflow: hidden;
     //margin: -20px;
   }
 
@@ -50,6 +51,18 @@
     color: $white;
   }
 }
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  & > .col-sm,
+  & > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+  }
+}
+
 .invisible {
   line-height: 0;
 }

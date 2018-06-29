@@ -1,12 +1,13 @@
 <?php if ( ! is_front_page() ) : ?>
-
+</div><!-- #primary -->
   <div class="title">
-    <div class="row">
+    <div class="row no-gutters">
       <div class="col text-center">
         <h1><?php the_title(); ?></h1>
       </div>
     </div>
   </div>
+<div class="container-fluid">
 
 <?php endif; ?>
 
@@ -86,9 +87,9 @@
       </div>
 
     <?php elseif ( get_row_layout() == 'content' ) : ?>
-
+    </div><!-- #primary .container-fluid -->
       <div class="block-content block-content-<?php the_sub_field('background'); ?>">
-        <div class="row">
+        <div class="row no-gutters">
           <div class="col-sm">
             <?php if ( get_sub_field('column_1') === 'content' ) : ?>
               <div class="content-text">
@@ -128,6 +129,7 @@
           <?php endif; ?>
         </div><!-- .row -->
       </div><!-- .block-content -->
+    <div class="container-fluid">
 
     <?php elseif ( get_row_layout() == 'bookmark' ) : ?>
 
