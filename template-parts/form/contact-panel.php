@@ -1,6 +1,8 @@
 <div class="form-panel contact-panel">
   <div class="container">
-    <form>
+    <form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post" id="contact_form">
+      <input type="hidden" name="action" value="contact_form_submission">
+      <input type="hidden" name="contact_form_nonce" value="<?php echo $bid_form_nonce = wp_create_nonce( 'contact_form_nonce' ); ?>">
     <div class="row align-items-center">
 
         <div class="col-sm-4">
@@ -11,43 +13,43 @@
           <div class="row">
             <div class="col-sm">
               <div class="form-group">
-                <input type="text" class="form-control" id="first-name" placeholder="First name">
+                <input type="text" class="form-control" id="first-name" name="contact[first_name]" placeholder="First name">
               </div>
             </div>
             <div class="col-sm">
               <div class="form-group">
-                <input type="text" class="form-control" id="last-name" placeholder="Last name">
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm">
-              <div class="form-group">
-                <input type="text" class="form-control" id="business-name" placeholder="Business Name">
-              </div>
-            </div>
-            <div class="col-sm">
-              <div class="form-group">
-                <input type="email" class="form-control" id="email" placeholder="Email">
+                <input type="text" class="form-control" id="last-name" name="contact[last_name]" placeholder="Last name">
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-sm">
               <div class="form-group">
-                <input type="text" class="form-control" id="phone" placeholder="Telephone">
+                <input type="text" class="form-control" id="business-name" name="contact[business_name]" placeholder="Business Name">
+              </div>
+            </div>
+            <div class="col-sm">
+              <div class="form-group">
+                <input type="email" class="form-control" id="email" name="contact[email]" placeholder="Email">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm">
+              <div class="form-group">
+                <input type="text" class="form-control" id="phone" name="contact[phone]" placeholder="Telephone">
               </div>
             </div>
             <div class="col-sm">
               <div class="row">
                 <div class="col">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="city" placeholder="City">
+                    <input type="text" class="form-control" id="city" name="contact[city]" placeholder="City">
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="state" placeholder="State">
+                    <input type="text" class="form-control" id="state" name="contact[state]" placeholder="State">
                   </div>
                 </div>
               </div>

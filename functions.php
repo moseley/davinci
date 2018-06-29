@@ -73,6 +73,50 @@ function davinci_include_svg_icons() {
 }
 add_action( 'wp_footer', 'davinci_include_svg_icons', 9999 );
 
+function davinci_process_bid_form() {
+  if ( isset( $_POST['bid_form_nonce'] ) && wp_verify_nonce( $_POST['bid_form_nonce'], 'bid_form_nonce' ) ) {
+    $first_name = sanitize_text_field( $_POST['bid']['first_name'] );
+    $last_name = sanitize_text_field( $_POST['bid']['last_name'] );
+    $business_name = sanitize_text_field( $_POST['bid']['business_name'] );
+    $email = sanitize_text_field( $_POST['bid']['email'] );
+    $phone = sanitize_text_field( $_POST['bid']['phone'] );
+    $city = sanitize_text_field( $_POST['bid']['city'] );
+    $state = sanitize_text_field( $_POST['bid']['state'] );
+    $message = 'Name: ' . $first_name . ' ' . $last_name . "\r\n" .
+      'Business: ' . $business_name . "\r\n" .
+      'Email: ' . $email . "\r\n" .
+      'Phone: ' . $phone . "\r\n" .
+      'Location: ' . $city . ', ' . $state . "\r\n";
+    $to = get_bloginfo( 'admin_email' );
+    $subject = 'New Bid Request from website';
+    wp_mail( $to, $subject, $message );
+  }
+}
+add_action( 'admin_post_bid_form_submission', 'davinci_process_bid_form' );
+add_action( 'admin_post_nopriv_bid_form_submission', 'davinci_process_bid_form' );
+
+function davinci_process_contact_form() {
+  if ( isset( $_POST['contact_form_nonce'] ) && wp_verify_nonce( $_POST['contact_form_nonce'], 'contact_form_nonce' ) ) {
+    $first_name = sanitize_text_field( $_POST['contact']['first_name'] );
+    $last_name = sanitize_text_field( $_POST['contact']['last_name'] );
+    $business_name = sanitize_text_field( $_POST['contact']['business_name'] );
+    $email = sanitize_text_field( $_POST['contact']['email'] );
+    $phone = sanitize_text_field( $_POST['contact']['phone'] );
+    $city = sanitize_text_field( $_POST['contact']['city'] );
+    $state = sanitize_text_field( $_POST['contact']['state'] );
+    $message = 'Name: ' . $first_name . ' ' . $last_name . "\r\n" .
+      'Business: ' . $business_name . "\r\n" .
+      'Email: ' . $email . "\r\n" .
+      'Phone: ' . $phone . "\r\n" .
+      'Location: ' . $city . ', ' . $state . "\r\n";
+    $to = get_bloginfo( 'admin_email' );
+    $subject = 'New Contact Request from website';
+    wp_mail( $to, $subject, $message );
+  }
+}
+add_action( 'admin_post_contact_form_submission', 'davinci_process_contact_form' );
+add_action( 'admin_post_nopriv_contact_form_submission', 'davinci_process_contact_form' );
+
 function davinci_get_svg( $args = array() ) {
 	// Make sure $args are an array.
 	if ( empty( $args ) ) {
