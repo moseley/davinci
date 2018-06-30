@@ -79,11 +79,13 @@
 
     </div><!-- #primary .container-fluid -->
     <div class="bg-white">
-      <div class="row">
-        <div class="col">
-          <div class="block-headline">
-            <h2><?php the_sub_field('headline'); ?></h2>
-            <p><?php the_sub_field('subline'); ?></p>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="block-headline">
+              <h2><?php the_sub_field('headline'); ?></h2>
+              <p><?php the_sub_field('subline'); ?></p>
+            </div>
           </div>
         </div>
       </div>
