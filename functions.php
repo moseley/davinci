@@ -87,9 +87,18 @@ function davinci_process_bid_form() {
       'Email: ' . $email . "\r\n" .
       'Phone: ' . $phone . "\r\n" .
       'Location: ' . $city . ', ' . $state . "\r\n";
-    $to = get_bloginfo( 'admin_email' );
+    $to = get_field( 'bid_form_email', 'option' );
+    if ( ! $to ) {
+      $to = get_bloginfo( 'admin_email' );
+    }
     $subject = 'New Bid Request from website';
     wp_mail( $to, $subject, $message );
+    if ( wp_get_referer() ) {
+      wp_safe_redirect( wp_get_referer() );
+    }
+    else {
+      wp_safe_redirect( get_home_url() );
+    }
   }
 }
 add_action( 'admin_post_bid_form_submission', 'davinci_process_bid_form' );
@@ -109,9 +118,18 @@ function davinci_process_contact_form() {
       'Email: ' . $email . "\r\n" .
       'Phone: ' . $phone . "\r\n" .
       'Location: ' . $city . ', ' . $state . "\r\n";
-    $to = get_bloginfo( 'admin_email' );
+    $to = get_field( 'contact_form_email', 'option' );
+    if ( ! $to ) {
+      $to = get_bloginfo( 'admin_email' );
+    }
     $subject = 'New Contact Request from website';
     wp_mail( $to, $subject, $message );
+    if ( wp_get_referer() ) {
+      wp_safe_redirect( wp_get_referer() );
+    }
+    else {
+      wp_safe_redirect( get_home_url() );
+    }
   }
 }
 add_action( 'admin_post_contact_form_submission', 'davinci_process_contact_form' );
@@ -199,3 +217,7 @@ function davinci_get_svg( $args = array() ) {
 }
 
 require get_parent_theme_file_path( '/inc/nav-walker.php' );
+
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+}
