@@ -52,4 +52,36 @@ jQuery( document ).ready( function ($) {
 
         return false;
     } );
+
+    $('#contact_form').submit( function( event ) {
+      event.preventDefault();
+      $.post(
+    		params.ajax_url,
+    		{
+    			action: 'contact_form_ajax',
+    			data: $('#contact_form').serialize()
+    		},
+    		function(response){
+    			if (response) {
+            $('#contact_response').html('<h2>Form submitted successfully.</h2>');
+          }
+    		}
+    	);
+    });
+
+    $('#bid_form').submit( function( event ) {
+      event.preventDefault();
+      $.post(
+    		params.ajax_url,
+    		{
+    			action: 'bid_form_ajax',
+    			data: $('#bid_form').serialize()
+    		},
+    		function(response){
+    			if (response) {
+            $('#bid_response').html('<h2>Form submitted successfully.</h2>');
+          }
+    		}
+    	);
+    });
 } );

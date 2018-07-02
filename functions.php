@@ -51,7 +51,9 @@ function davinci_scripts() {
 
   wp_enqueue_script( 'slick', get_template_directory_uri() . '/node_modules/slick-carousel/slick/slick.min.js', array( 'jquery' ), null, true );
   wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.min.js', array( 'jquery' ), null, true );
+  $params = array( 'ajax_url' => admin_url('admin-ajax.php') );
   wp_enqueue_script( 'davinci-script', get_template_directory_uri() . '/assets/js/davinci.min.js', array('bootstrap', 'slick'), null, true );
+  wp_localize_script( 'davinci-script', 'params', $params );
 }
 add_action( 'wp_enqueue_scripts', 'davinci_scripts' );
 
@@ -104,6 +106,35 @@ function davinci_process_bid_form() {
 add_action( 'admin_post_bid_form_submission', 'davinci_process_bid_form' );
 add_action( 'admin_post_nopriv_bid_form_submission', 'davinci_process_bid_form' );
 
+function davinci_process_bid_form_ajax() {
+  $data = array();
+  parse_str( $_POST['data'], $data );
+
+  if ( isset( $data['bid_form_nonce'] ) && wp_verify_nonce( $data['bid_form_nonce'], 'bid_form_nonce' ) ) {
+    $first_name = sanitize_text_field( $data['bid']['first_name'] );
+    $last_name = sanitize_text_field( $data['bid']['last_name'] );
+    $business_name = sanitize_text_field( $data['bid']['business_name'] );
+    $email = sanitize_text_field( $data['bid']['email'] );
+    $phone = sanitize_text_field( $data['bid']['phone'] );
+    $city = sanitize_text_field( $data['bid']['city'] );
+    $state = sanitize_text_field( $data['bid']['state'] );
+    $message = 'Name: ' . $first_name . ' ' . $last_name . "\r\n" .
+      'Business: ' . $business_name . "\r\n" .
+      'Email: ' . $email . "\r\n" .
+      'Phone: ' . $phone . "\r\n" .
+      'Location: ' . $city . ', ' . $state . "\r\n";
+    $to = get_field( 'bid_form_email', 'option' );
+    if ( ! $to ) {
+      $to = get_bloginfo( 'admin_email' );
+    }
+    $subject = 'New Bid Request from website';
+    wp_mail( $to, $subject, $message );
+  }
+  die();
+}
+add_action( 'wp_ajax_bid_form_ajax', 'davinci_process_bid_form_ajax' );
+add_action( 'wp_ajax_nopriv_bid_form_ajax', 'davinci_process_bid_form_ajax' );
+
 function davinci_process_contact_form() {
   if ( isset( $_POST['contact_form_nonce'] ) && wp_verify_nonce( $_POST['contact_form_nonce'], 'contact_form_nonce' ) ) {
     $first_name = sanitize_text_field( $_POST['contact']['first_name'] );
@@ -134,6 +165,35 @@ function davinci_process_contact_form() {
 }
 add_action( 'admin_post_contact_form_submission', 'davinci_process_contact_form' );
 add_action( 'admin_post_nopriv_contact_form_submission', 'davinci_process_contact_form' );
+
+function davinci_process_contact_form_ajax() {
+  $data = array();
+  parse_str( $_POST['data'], $data );
+
+  if ( isset( $data['contact_form_nonce'] ) && wp_verify_nonce( $data['contact_form_nonce'], 'contact_form_nonce' ) ) {
+    $first_name = sanitize_text_field( $data['contact']['first_name'] );
+    $last_name = sanitize_text_field( $data['contact']['last_name'] );
+    $business_name = sanitize_text_field( $data['contact']['business_name'] );
+    $email = sanitize_text_field( $data['contact']['email'] );
+    $phone = sanitize_text_field( $data['contact']['phone'] );
+    $city = sanitize_text_field( $data['contact']['city'] );
+    $state = sanitize_text_field( $data['contact']['state'] );
+    $message = 'Name: ' . $first_name . ' ' . $last_name . "\r\n" .
+      'Business: ' . $business_name . "\r\n" .
+      'Email: ' . $email . "\r\n" .
+      'Phone: ' . $phone . "\r\n" .
+      'Location: ' . $city . ', ' . $state . "\r\n";
+    $to = get_field( 'contact_form_email', 'option' );
+    if ( ! $to ) {
+      $to = get_bloginfo( 'admin_email' );
+    }
+    $subject = 'New Contact Request from website';
+    wp_mail( $to, $subject, $message );
+  }
+  die();
+}
+add_action( 'wp_ajax_contact_form_ajax', 'davinci_process_contact_form_ajax' );
+add_action( 'wp_ajax_nopriv_contact_form_ajax', 'davinci_process_contact_form_ajax' );
 
 function davinci_get_svg( $args = array() ) {
 	// Make sure $args are an array.

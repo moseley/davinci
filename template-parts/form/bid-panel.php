@@ -8,9 +8,13 @@
         <div class="col-md-4">
           <h2><?php _e('Bid Request', 'davinci'); ?></h2>
           <p><?php _e('DaVinci advisors are ready: ', 'davinci'); ?><strong><?php _e('800.654.1177', 'davinci'); ?></strong></p>
-
         </div>
         <div class="col-md-8">
+          <div class="row">
+            <div class="col-md">
+              <div id="bid_response"></div>
+            </div>
+          </div>
           <div class="row">
             <div class="col-md">
               <div class="form-group">

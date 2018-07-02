@@ -12,6 +12,11 @@
         <div class="col-md-8">
           <div class="row">
             <div class="col-md">
+              <div id="contact_response"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md">
               <div class="form-group">
                 <input type="text" class="form-control" id="first-name" name="contact[first_name]" placeholder="First name">
               </div>
