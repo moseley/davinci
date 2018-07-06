@@ -18,43 +18,43 @@
           <div class="row">
             <div class="col-md">
               <div class="form-group">
-                <input type="text" class="form-control" id="first-name" name="bid[first_name]" placeholder="First name">
+                <input type="text" class="form-control" id="first-name" name="bid[first_name]" placeholder="First name" required>
               </div>
             </div>
             <div class="col-md">
               <div class="form-group">
-                <input type="text" class="form-control" id="last-name" name="bid[last_name]" placeholder="Last name">
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md">
-              <div class="form-group">
-                <input type="text" class="form-control" id="business-name" name="bid[business_name]" placeholder="Business Name">
-              </div>
-            </div>
-            <div class="col-md">
-              <div class="form-group">
-                <input type="email" class="form-control" id="email" name="bid[email]" placeholder="Email">
+                <input type="text" class="form-control" id="last-name" name="bid[last_name]" placeholder="Last name" required>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md">
               <div class="form-group">
-                <input type="text" class="form-control" id="phone" name="bid[phone]" placeholder="Telephone">
+                <input type="text" class="form-control" id="business-name" name="bid[business_name]" placeholder="Business Name" required>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="form-group">
+                <input type="email" class="form-control" id="email" name="bid[email]" placeholder="Email" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md">
+              <div class="form-group">
+                <input type="text" class="form-control" id="phone" name="bid[phone]" placeholder="Telephone" required>
               </div>
             </div>
             <div class="col-md">
               <div class="row">
                 <div class="col-9">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="city" name="bid[city]"placeholder="Job location: City">
+                    <input type="text" class="form-control" id="city" name="bid[city]"placeholder="Job location: City" required>
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="state" name="bid[state]" placeholder="State">
+                    <input type="text" class="form-control" id="state" name="bid[state]" placeholder="State" required>
                   </div>
                 </div>
               </div>
