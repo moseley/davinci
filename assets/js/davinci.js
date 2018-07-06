@@ -62,9 +62,7 @@ jQuery( document ).ready( function ($) {
     			data: $('#contact_form').serialize()
     		},
     		function(response){
-    			if (response) {
-            $('#contact_response').html('<h2>Form submitted successfully.</h2>');
-          }
+          $('#contact_response').html('<h2>Thank you.</h2>');
     		}
     	);
     });
@@ -78,9 +76,7 @@ jQuery( document ).ready( function ($) {
     			data: $('#bid_form').serialize()
     		},
     		function(response){
-    			if (response) {
-            $('#bid_response').html('<h2>Form submitted successfully.</h2>');
-          }
+          $('#bid_response').html('<h2>Thank you.</h2>');
     		}
     	);
     });
