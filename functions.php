@@ -46,13 +46,15 @@ add_action( 'widgets_init', 'davinci_widgets_init' );
 
 
 function davinci_scripts() {
+  $theme_data = wp_get_theme();
+  define( 'THEME_VERSION', $theme_data->Version );
   wp_enqueue_style( 'typekit', 'https://use.typekit.net/sgy4oeq.css' );
-	wp_enqueue_style( 'davinci-style', get_template_directory_uri() . '/assets/css/davinci.css', array( 'typekit' ), null );
+	wp_enqueue_style( 'davinci-style', get_template_directory_uri() . '/assets/css/davinci.css', array( 'typekit' ), THEME_VERSION );
 
   wp_enqueue_script( 'slick', get_template_directory_uri() . '/node_modules/slick-carousel/slick/slick.min.js', array( 'jquery' ), null, true );
   wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.min.js', array( 'jquery' ), null, true );
   $params = array( 'ajax_url' => admin_url('admin-ajax.php') );
-  wp_enqueue_script( 'davinci-script', get_template_directory_uri() . '/assets/js/davinci.min.js', array('bootstrap', 'slick'), null, true );
+  wp_enqueue_script( 'davinci-script', get_template_directory_uri() . '/assets/js/davinci.min.js', array('bootstrap', 'slick'), THEME_VERSION, true );
   wp_localize_script( 'davinci-script', 'params', $params );
 }
 add_action( 'wp_enqueue_scripts', 'davinci_scripts' );
