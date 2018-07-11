@@ -83,9 +83,9 @@
         <div class="row">
           <?php if (get_sub_field('share')) : ?>
             <div class="col-1 order-last">
-              <div class="block-headline">
+              <div class="block-headline-share">
                 <a class="addthis_button_compact">
-                  <img src="<?php echo get_theme_file_uri( '/assets/svg/share.svg' ); ?>" width="50" height="50" alt="Share">
+                  <img src="<?php echo get_theme_file_uri( '/assets/svg/share.svg' ); ?>" width="30" height="30" alt="Share">
                 </a>
               </div>
             </div>
