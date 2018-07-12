@@ -82,7 +82,7 @@
     & > .nav-item {
       padding-top: 5rem;
       padding-bottom: 1rem;
-      margin-left: 3rem;
+      margin-left: 2rem;
     }
 
     .nav-link {
@@ -96,6 +96,12 @@
     position: absolute;
     top: 0;
     left: 100%;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .navbar-light .navbar-nav > .nav-item {
+    margin-left: 3rem;
   }
 }
 

@@ -8,7 +8,7 @@
 <body <?php body_class(); ?>>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/">
-      <img src="<?php echo get_theme_file_uri( '/assets/svg/davinci_custom_fireplaces.svg' ); ?>" width="300" height="112"><br>
+      <img src="<?php echo get_theme_file_uri( '/assets/svg/davinci_custom_fireplaces.svg' ); ?>" width="300" height="112">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
