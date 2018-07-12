@@ -1,17 +1,14 @@
 .block-headline {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 
   h2 {
-    float: left;
-    font-size: 2.6rem;
+    font-size: 1.8rem;
     padding-right: 15px;
   }
 
   p {
-    float: left;
-    font-size: 1.3rem;
-    padding-top: 1.05rem;
+    font-size: 1.1rem;
   }
 
   &:after {
@@ -24,10 +21,39 @@
 }
 
 .block-headline-share {
-  margin-top: 42px;
-  margin-bottom: 43px;
+  margin-bottom: 10px;
 }
 
 .bg-white {
   background-color: $white;
+}
+
+@include media-breakpoint-up(sm) {
+  .block-headline-share {
+    margin-top: 42px;
+    margin-bottom: 43px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .block-headline {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    h2 {
+      float: left;
+      font-size: 2.6rem;
+      padding-right: 15px;
+    }
+
+    p {
+      float: left;
+      font-size: 1.3rem;
+      padding-top: 1.05rem;
+    }
+  }
+  .block-headline-share {
+    margin-top: 42px;
+    margin-bottom: 43px;
+  }
 }

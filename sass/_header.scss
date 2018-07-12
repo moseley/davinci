@@ -15,25 +15,28 @@ a.navbar-brand {
 
 .title {
   background-color: $gray-600;
-  padding-top: 40px;
-  padding-bottom: 40px;
-
-  .navigation {
-    padding-left: 20px;
-    padding-right: 20px;
-    .alignleft,
-    .alignright {
-      margin-top: 10px;
-    }
-  }
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   h1 {
       color: $white;
+      font-size: 2rem;
   }
 
   .btn-secondary {
     background-color: $orange;
     font-family: $font-family-sans-serif;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .title {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    h1 {
+        font-size: 2.5rem;
+    }
   }
 }
 
