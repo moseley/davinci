@@ -82,11 +82,11 @@
     & > .nav-item {
       padding-top: 5rem;
       padding-bottom: 1rem;
-      margin-left: 2rem;
+      margin-left: 1rem;
     }
 
     .nav-link {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
     }
   }
   .dropdown:hover>.dropdown-menu {
@@ -101,7 +101,7 @@
 
 @include media-breakpoint-up(xl) {
   .navbar-light .navbar-nav > .nav-item {
-    margin-left: 3rem;
+    margin-left: 2.5rem;
   }
 }
 
